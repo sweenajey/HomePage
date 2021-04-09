@@ -19,6 +19,8 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.scene.text.Text;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 
 import org.w3c.dom.events.Event;
@@ -46,8 +48,8 @@ public class HomePage extends Application implements EventHandler <ActionEvent>{
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("AmpStart - HomePage");
-        primaryStage.setWidth(400);
-        primaryStage.setHeight(500);
+        primaryStage.setWidth(550);
+        primaryStage.setHeight(600);
 
         Text title = new Text();
 
@@ -69,44 +71,62 @@ public class HomePage extends Application implements EventHandler <ActionEvent>{
 
 
        //adding the calorie button
+        //creating image for calorie button
+        Image cal_img = new Image(getClass().getResourceAsStream("calorie.png"));
        Button calories = new Button ("Calories");
+       calories.setGraphic(new ImageView(cal_img));
+       //designing the button
        calories.setStyle("-fx-font-size: 40");
        calories.setText("Enter Calories");
        calories.setStyle("-fx-background-color: #0000FF");
-       calories.setMaxSize(500,700);
+       //setting the size of the button
+        calories.setPrefSize(50,50);
+        //font of the text in the button
        calories.setFont(Font.font("Arial"));
 
 
-
        //adding the exercise button
+        //creating image for exercise button
+        Image exe_img = new Image(getClass().getResourceAsStream("exercise.png"));
        Button exercise = new Button ("Exercise");
+       exercise.setGraphic(new ImageView(exe_img));
        exercise.setStyle("-fx-font-size: 40");
        exercise.setText("Choose type of Exercise");
        exercise.setStyle("-fx-background-color: #1F1FFF");
-       exercise.setMaxSize(500,700);
+       exercise.setPrefSize(50,50);
+      // exercise.setMaxSize(500,700);
        exercise.setFont(Font.font("Arial"));
 
 
 
        //adding the goals button
+        //creating image for goals button
+        Image goal_img = new Image(getClass().getResourceAsStream("goals.png"));
        Button goals = new Button("Goals");
+       goals.setGraphic(new ImageView(goal_img));
        goals.setStyle("-fx-font-size: 40");
        goals.setStyle("-fx-background-color: #4949FF ");
+       goals.setPrefSize(50,50);
        goals.setText("Check Goals");
        goals.setFont(Font.font("Arial"));
 
-       //adding the sleeping button
+       //adding the friends button
+        Image friend_img = new Image(getClass().getResourceAsStream("friend.png"));
        Button friends = new Button ("Friends");
-       friends.setStyle("-fx-font-size: 200");
+       friends.setGraphic(new ImageView(friend_img));
+       friends.setStyle("-fx-font-size: 40");
        friends.setStyle("-fx-background-color: #7879FF ");
-       friends.setText("Track Sleep");
+       friends.setPrefSize(50,50);
+       friends.setText("Friends");
        friends.setFont(Font.font("Arial"));
 
 
-
+        Image log_img = new Image(getClass().getResourceAsStream("logout.png"));
        Button logout = new Button("Logout");
+       logout.setGraphic(new ImageView(log_img));
        logout.setStyle("-fx-font-size: 40");
        logout.setStyle("-fx-background-color: #A3A3FF ");
+       logout.setPrefSize(50,50);
        logout.setText("Logout");
        logout.setFont(Font.font("Arial"));
 
