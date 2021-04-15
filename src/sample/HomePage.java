@@ -3,6 +3,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
@@ -11,9 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -26,6 +25,7 @@ import javafx.scene.image.ImageView;
 import org.w3c.dom.events.Event;
 
 import java.awt.*;
+import java.io.InputStream;
 
 
 public class HomePage extends Application implements EventHandler <ActionEvent>{
@@ -50,19 +50,6 @@ public class HomePage extends Application implements EventHandler <ActionEvent>{
         primaryStage.setTitle("AmpStart - HomePage");
         primaryStage.setWidth(550);
         primaryStage.setHeight(600);
-
-        Text title = new Text();
-
-        //deciding the font of the text for the title
-        title.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 20 ));
-
-        //where to position the title
-        title.setX(50);
-        title.setY(150);
-
-        title.setText("Welcome to AmpStart HomePage");
-
-
 
 
         BorderPane but_border = new BorderPane();
@@ -166,18 +153,12 @@ public class HomePage extends Application implements EventHandler <ActionEvent>{
 
        Scene buttons = new Scene(button_layout);
 
+
        primaryStage.setScene(buttons);
+
 
        //primaryStage.setScene();
        primaryStage.show();
-
-
-
-
-
-
-
-
 
 
 
